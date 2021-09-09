@@ -1,0 +1,19 @@
+public class Formatnum {
+    public static void main(String args[]) {
+      int x=7900000;
+      double xs = x;
+      String xss = format(xs);
+
+      System.out.println(xss);
+    }
+    public static String format(double num) {
+    	if(num<1000)return Double.toString(num);
+    	if(num<1000000) {
+    		if(num>=1000)return Double.toString(num/1000) + "k";
+    	}
+    	if(num<1000000000) {
+    		if(num>=1000000)return Double.toString(num/1000000) + "m";
+    	}
+		return Double.toString(num);
+    }
+}
